@@ -1,8 +1,17 @@
 FROM python:alpine
 
-RUN pip3 install flask utils
 
-RUN apk update && apk add build-base
+RUN apk update 
+RUN apk add \
+  build-base \
+  cmake
+
+RUN pip3 install \
+  flask \
+  utils \
+  dlib \
+  face_recognition \
+  imutils
 
 RUN pip3 install dlib face_recognition imutils
 
