@@ -4,14 +4,37 @@ FROM python:alpine
 RUN apk update 
 RUN apk add \
   build-base \
-  cmake
+  cmake \
+  libjpeg \
+  zlib-dev \
+  tiff-dev \
+  freetype \
+  freetype-dev \
+  lcms \
+  lcms-dev \
+  lcms2 \
+  lcms2-dev \
+  lcms2-utils \
+  libwebp \
+  libwebp-tools \
+  libwebp-dev \
+  openjpeg \
+  openjpeg-tools \
+  openjpeg-dev \
+  pngquant 
+
+
+
+
+
 
 RUN pip3 install \
   flask \
   utils \
   dlib \
   face_recognition \
-  imutils
+  imutils \
+
 
 RUN pip3 install dlib face_recognition imutils
 
