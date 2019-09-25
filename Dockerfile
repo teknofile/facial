@@ -23,6 +23,7 @@ RUN apk add \
   openjpeg-dev \
   pngquant 
 
+<<<<<<< HEAD
 #RUN pip3 install \
 #  flask \
 #  utils \
