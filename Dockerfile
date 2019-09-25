@@ -23,20 +23,13 @@ RUN apk add \
   openjpeg-dev \
   pngquant 
 
-
-
-
-
-
 RUN pip3 install \
   flask \
   utils \
   dlib \
   face_recognition \
-  imutils \
+  imutils
 
-
-RUN pip3 install dlib face_recognition imutils
 
 COPY src /src/
 
