@@ -1,8 +1,7 @@
 FROM python:alpine
 
 
-RUN apk update 
-RUN apk add \
+RUN apk update && apk add \
   build-base \
   cmake \
   libjpeg \
@@ -22,14 +21,6 @@ RUN apk add \
   openjpeg-tools \
   openjpeg-dev \
   pngquant 
-
-<<<<<<< HEAD
-#RUN pip3 install \
-#  flask \
-#  utils \
-#  dlib \
-#  face_recognition \
-#  imutils \
 
 RUN pip3 install -r requirements.txt
 
