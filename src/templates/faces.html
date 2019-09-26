@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Faces The System Knows About</title>
+  </head>
+  <body>
+    <h2>Faces We Know About</h2>
+    <table border=1>
+      <thead>
+        <td>ID</td>
+        <td>Name</td>
+        <td>encodings</td>
+        <td>raw_pic</td>
+      </thead>
+      {% for row in rows %}
+      <tr>
+        <td>{{row["ID"]}}</td>
+        <td>{{row["NAME"]}}</td>
+        <td>{{row["encodings"]}}</td>
+        <td>TODO</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br />
+    <a href="/">Go back home</a>
+  </body>
+</html>
