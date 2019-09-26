@@ -20,7 +20,9 @@ RUN apk update && apk add \
   openjpeg \
   openjpeg-tools \
   openjpeg-dev \
-  pngquant 
+  pngquant \
+  sqlite \
+  sqlite-dev
 
 ADD ./requirements.txt .
 

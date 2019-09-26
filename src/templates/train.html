@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Training Facial Recogition</title>
+    </head>
+    <body>
+        <div align="center"><h2>Training the System</h2>
+            <h4><a href="/">Go back home</a></h4>
+
+            <table border=1 width="80%">
+                <thead>
+                    <td>Name</td>
+                </thead>
+                {% for row in rows %}
+                <tr>
+                    <td>{{row["NAME"]}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <hr />
+            <form method="post" action="/train" enctype="multipart/form-data">
+            <dl>
+                <p><input type="file" name="file" autocomplete="off" required></p>
+            </dl>
+             <p><input type="submit" value="Submit"></p>
+            </form>
+            <hr />
+            <h4>Detected Faces...</h4>
+            <table width="50%" border=1>
+                {% for foo in faces %}
+                <tr>
+                    <td width="10%"><img src="data:image/png;base64,{{ foo }}"></td>
+                    <td width="90%" align="center">
+                        <form action="">
+                            <input type=hidden value="{{ foo }}" />
+                            <select name="person">
+                                <option value="James T. Richardson Jr">James T. Richardson Jr.</option>
+                                <option value="Wendy R. Richardson">Wendy R. Richardson</option>
+                            </select>
+                            <input type=submit value="submit" />
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            <br />
+            <br />
+            <h4>Original Image</h4>
+            <table width="50%" border=1>
+                <tr>
+                    <td align="center"><img src="data:image/png;base64,{{ img_tag }}"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
