@@ -7,22 +7,14 @@ RUN apk update && apk add \
   libjpeg \
   zlib-dev \
   tiff-dev \
-  freetype \
-  freetype-dev \
-  lcms \
-  lcms-dev \
-  lcms2 \
-  lcms2-dev \
-  lcms2-utils \
-  libwebp \
-  libwebp-tools \
-  libwebp-dev \
-  openjpeg \
-  openjpeg-tools \
-  openjpeg-dev \
+  freetype freetype-dev \
+  lcms lcms-dev \
+  lcms2 lcms2-dev lcms2-utils \
+  libwebp libwebp-tools libwebp-dev \
+  openjpeg openjpeg-tools openjpeg-dev \
   pngquant \
-  sqlite \
-  sqlite-dev
+  sqlite sqlite-dev \
+  openblas openblas-dev
 
 ADD ./requirements.txt .
 
