@@ -22,10 +22,12 @@ RUN apk update && apk add \
   openjpeg-dev \
   pngquant 
 
+ADD ./requirements.txt .
+
 RUN pip3 install -r requirements.txt
 
 COPY src /src/
 
 EXPOSE 5000
 
-ENTRYPOINT ["python", "/src/app.py"]
+ENTRYPOINT ["python", "/src/main.py"]

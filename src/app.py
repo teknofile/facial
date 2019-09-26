@@ -1,10 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask
+
+UPLOAD_FOLDER = '/tmp'
 
 app = Flask(__name__)
-
-@app.route('/')
-def hello_whale():
-    return render_template("whale_hello.html")
-
-if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+app.secret_key = "secret key"
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
