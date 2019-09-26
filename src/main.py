@@ -73,4 +73,4 @@ def list_faces():
     return render_template("faces.html", rows = rows)
 
 if __name__ == "__main__":
-    app.run()
+    app.run('0.0.0.0', '5000', True)
