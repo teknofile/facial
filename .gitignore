@@ -2,3 +2,4 @@ database.db
 *.swp
 *.pyc
 src/__pycache__/*
+venv/
