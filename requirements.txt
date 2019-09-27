@@ -1,7 +1,0 @@
-Flask
-utils
-dlib
-face_recognition
-imutils
-sklearn
-Cython
