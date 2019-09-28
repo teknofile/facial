@@ -1,4 +1,5 @@
 database.db
+app.db
 *.swp
 *.pyc
 src/__pycache__/*
